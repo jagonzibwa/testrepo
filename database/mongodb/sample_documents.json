@@ -1,0 +1,130 @@
+[
+  {
+    "_id": {
+      "$oid": "6adf49388b5edaeb3c09dd96"
+    },
+    "timestamp": {
+      "$date": "2018-09-30T23:00:00Z"
+    },
+    "traffic_volume": 954,
+    "weather": {
+      "temp_k": 282.12,
+      "rain_1h_mm": 0.0,
+      "snow_1h_mm": 0.0,
+      "clouds_pct": 90,
+      "conditions": [
+        {
+          "main": "Clouds",
+          "description": "overcast clouds"
+        }
+      ]
+    },
+    "holiday": null,
+    "calendar": {
+      "year": 2018,
+      "month": 9,
+      "day": 30,
+      "hour": 23,
+      "day_of_week": 6,
+      "is_weekend": true
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6adf49388b5edaeb3c093fca"
+    },
+    "timestamp": {
+      "$date": "2012-10-10T07:00:00Z"
+    },
+    "traffic_volume": 6793,
+    "weather": {
+      "temp_k": 281.25,
+      "rain_1h_mm": 0.0,
+      "snow_1h_mm": 0.0,
+      "clouds_pct": 99,
+      "conditions": [
+        {
+          "main": "Rain",
+          "description": "light rain"
+        },
+        {
+          "main": "Drizzle",
+          "description": "light intensity drizzle"
+        }
+      ]
+    },
+    "holiday": null,
+    "calendar": {
+      "year": 2012,
+      "month": 10,
+      "day": 10,
+      "hour": 7,
+      "day_of_week": 2,
+      "is_weekend": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6adf49388b5edaeb3c0946b2"
+    },
+    "timestamp": {
+      "$date": "2012-12-25T08:00:00Z"
+    },
+    "traffic_volume": 642,
+    "weather": {
+      "temp_k": 263.34,
+      "rain_1h_mm": 0.0,
+      "snow_1h_mm": 0.0,
+      "clouds_pct": 90,
+      "conditions": [
+        {
+          "main": "Snow",
+          "description": "heavy snow"
+        }
+      ]
+    },
+    "holiday": "Christmas Day",
+    "calendar": {
+      "year": 2012,
+      "month": 12,
+      "day": 25,
+      "hour": 8,
+      "day_of_week": 1,
+      "is_weekend": false
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6adf49388b5edaeb3c0943cd"
+    },
+    "timestamp": {
+      "$date": "2012-11-23T17:00:00Z"
+    },
+    "traffic_volume": 3900,
+    "weather": {
+      "temp_k": 274.35,
+      "rain_1h_mm": 0.0,
+      "snow_1h_mm": 0.0,
+      "clouds_pct": 90,
+      "conditions": [
+        {
+          "main": "Snow",
+          "description": "heavy snow"
+        },
+        {
+          "main": "Mist",
+          "description": "mist"
+        }
+      ]
+    },
+    "holiday": null,
+    "calendar": {
+      "year": 2012,
+      "month": 11,
+      "day": 23,
+      "hour": 17,
+      "day_of_week": 4,
+      "is_weekend": false
+    }
+  }
+]

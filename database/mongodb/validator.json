@@ -1,0 +1,57 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "traffic_readings",
+    "description": "One hourly observation of I-94 westbound traffic with embedded weather",
+    "required": ["timestamp", "traffic_volume", "weather", "calendar"],
+    "properties": {
+      "timestamp": {
+        "bsonType": "date",
+        "description": "Local hour of the observation (stored as UTC-naive)"
+      },
+      "traffic_volume": {
+        "bsonType": ["int", "long"],
+        "minimum": 0,
+        "description": "Vehicles in the hour (prediction target)"
+      },
+      "holiday": {
+        "bsonType": ["string", "null"],
+        "description": "Holiday name for every hour of a holiday date, otherwise null"
+      },
+      "weather": {
+        "bsonType": "object",
+        "required": ["clouds_pct", "conditions"],
+        "properties": {
+          "temp_k":     { "bsonType": ["double", "int", "null"], "description": "Kelvin" },
+          "rain_1h_mm": { "bsonType": ["double", "int"], "minimum": 0 },
+          "snow_1h_mm": { "bsonType": ["double", "int"], "minimum": 0 },
+          "clouds_pct": { "bsonType": ["int", "long"], "minimum": 0, "maximum": 100 },
+          "conditions": {
+            "bsonType": "array",
+            "minItems": 1,
+            "items": {
+              "bsonType": "object",
+              "required": ["main", "description"],
+              "properties": {
+                "main":        { "bsonType": "string" },
+                "description": { "bsonType": "string" }
+              }
+            }
+          }
+        }
+      },
+      "calendar": {
+        "bsonType": "object",
+        "required": ["year", "month", "day", "hour", "day_of_week", "is_weekend"],
+        "properties": {
+          "year":        { "bsonType": "int" },
+          "month":       { "bsonType": "int", "minimum": 1, "maximum": 12 },
+          "day":         { "bsonType": "int", "minimum": 1, "maximum": 31 },
+          "hour":        { "bsonType": "int", "minimum": 0, "maximum": 23 },
+          "day_of_week": { "bsonType": "int", "minimum": 0, "maximum": 6, "description": "Monday = 0" },
+          "is_weekend":  { "bsonType": "bool" }
+        }
+      }
+    }
+  }
+}

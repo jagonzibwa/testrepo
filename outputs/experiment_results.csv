@@ -1,0 +1,10 @@
+exp,model,features,hyperparameters,tuning,cv_mae,test_mae,test_rmse,test_r2,test_wape,fit_s
+E1,Seasonal naive (lag 168 h),lag_168 only,-,none,352.9,340.2,651.2,0.8911,10.25,0.0
+E2,Linear Regression,all 33,defaults,none,295.2,281.8,397.7,0.9594,8.49,0.2
+E3,Ridge (tuned),all 33,{'ridge__alpha': 10},"GridSearchCV, 6 values x 4 folds",294.7,281.7,398.0,0.9593,8.49,14.8
+E4,Random Forest (default),all 33,"n_estimators=150, others default",none,184.4,146.4,231.4,0.9862,4.41,23.2
+E5,Random Forest (tuned),all 33,"{'n_estimators': 150, 'min_samples_leaf': 2, 'max_samples': None, 'max_features': 0.33, 'max_depth': 18}","RandomizedSearchCV, 8 configs x 4 folds",173.8,140.0,219.4,0.9876,4.22,168.3
+E6,HistGradientBoosting (default),all 33,"learning_rate=0.1, max_iter=100, max_leaf_nodes=31",none,181.7,149.7,229.3,0.9865,4.51,4.2
+E7,HistGradientBoosting (tuned),all 33,"{'l2_regularization': 0.0053, 'learning_rate': 0.0305, 'max_features': 0.6521, 'max_iter': 221, 'max_leaf_nodes': 122, 'min_samples_leaf': 58}","RandomizedSearchCV, 25 configs x 4 folds",174.5,139.7,218.1,0.9878,4.21,200.0
+E8,HGB tuned - no lags/MAs,24 (drops 9),same as E7,reuses E7,301.4,222.1,377.4,0.9634,6.69,26.3
+E9,HGB tuned - no weather,18 (drops 15),same as E7,reuses E7,174.5,140.0,219.8,0.9876,4.22,17.9
